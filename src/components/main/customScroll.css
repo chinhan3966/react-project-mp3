@@ -1,0 +1,108 @@
+#scroll-hidden::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+#scroll-hidden::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* background: #465785; */
+  border-radius: 10px;
+}
+
+/* Handle */
+#scroll-hidden::-webkit-scrollbar-thumb {
+  /* background: #888; */
+  background: #465785;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* background: #465785; */
+  /* border-radius: 10px; */
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background: rgb(20, 19, 19);
+  /* background: #465785; */
+  /* border-radius: 10px; */
+}
+
+.rhap_container svg {
+  color: white;
+  font-size: 28px;
+}
+
+.rhap_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: inherit;
+  width: 100%;
+  padding: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.rhap_progress-container {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  flex: 1 0 auto;
+  align-self: center;
+  margin: 0 calc(10px + 1%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 0 10px !important;
+}
+
+.rhap_time {
+  color: #edeaea !important;
+  font-size: 13px !important;
+}
+
+.rhap_progress-indicator {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 3;
+  width: 10px !important;
+  height: 10px !important;
+  margin-left: -10px;
+  top: -2px !important;
+  background: white !important;
+  border-radius: 50px;
+  box-shadow: rgb(134 134 134 / 50%) 0 0 5px;
+}
+
+.rhap_progress-filled {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: white !important;
+  border-radius: 2px;
+}
+
+.rhap_download-progress {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 2px;
+}
+
+.rhap_additional-controls svg,
+.rhap_volume-controls svg {
+  font-size: 20px !important;
+}
+
+.rhap_main-controls svg {
+  font-size: 30px !important;
+}
