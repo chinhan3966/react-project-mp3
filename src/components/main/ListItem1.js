@@ -34,11 +34,11 @@ const ListItem1 = ({ title, data }) => {
             data.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  {console.log("check data", data)}
+                  {/* {console.log("check data", data)} */}
                   <Album
                     title={item.title || item.name}
                     des={item.author || item.des}
-                    img={item.img}
+                    img={item.img || item.links.images[0].url}
                   />
                 </SwiperSlide>
               );

@@ -9,18 +9,19 @@ import img5 from "../../assets/img/chali.jpg";
 import img6 from "../../assets/img/justin.jpg";
 import img7 from "../../assets/img/gd.jpg";
 import img8 from "../../assets/img/rose.png";
-import { data1, data } from "../../../src/data";
+import { data3, data4, data5, data6 } from "../../../src/data";
+// import { data, data1 } from "../../dataSong";
 import ListMusic from "./ListMusic";
 import { useContext } from "react";
 import Song from "./Context";
 const ListContainer = () => {
   const { dataSong } = useContext(Song);
-  // const data = dataSong.splice(40, 30);
-  // const data1 = dataSong.splice(1, 39);
+
   return (
     <div>
-      <ListItem1 title="Global Top 50" data={data} />
-      <ListItem1 title="Song You Might Like" data={data1} />
+      {/* {console.log(data5, data6)}  */}
+      <ListItem1 title="Global Top 50" data={data5} />
+      <ListItem1 title="Song You Might Like" data={data6} />
       <ListMusic />
     </div>
   );

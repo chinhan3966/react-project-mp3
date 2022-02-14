@@ -21,7 +21,9 @@ const Album = ({ img, title, des }) => {
         <h5 className="capitalize text-[#3f5080] font-semibold text-sm line-clamp-1">
           {title}
         </h5>
-        <p className="capitalize text-[#a8b3ce] text-xs mt-1">{des}</p>
+        <p className="capitalize text-[#a8b3ce] text-xs mt-1 line-clamp-1">
+          {des}
+        </p>
       </div>
     </div>
   );

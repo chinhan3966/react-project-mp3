@@ -1344,3 +1344,6 @@ export const dataSong = [
     },
   },
 ];
+
+// export const data = dataSong.splice(40, 30);
+// export const data1 = dataSong.splice(1, 39);

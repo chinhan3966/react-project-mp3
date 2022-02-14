@@ -1,13 +1,13 @@
 import React from "react";
 import { BsPlayFill } from "react-icons/bs";
 import { MdAddBox } from "react-icons/md";
-// import { dataSong } from "../../../src/dataSong";
+import { dataSong } from "../../../src/dataSong";
 import "./customScroll.css";
 import Song from "./Context";
 import { useContext, useState } from "react";
 
 const ListMusic = () => {
-  const { dataSong, song, handlePlaySong } = useContext(Song);
+  const { song, handlePlaySong } = useContext(Song);
   const [active, setActive] = useState(false);
   const handleClick = (id) => {
     // console.log("check id:>>", id);
@@ -24,12 +24,10 @@ const ListMusic = () => {
       </div>
       <div className="h-96 overflow-y-scroll" id="scroll-hidden">
         {/* listMusic */}
+        {console.log(dataSong)}
         {dataSong &&
           dataSong.length > 0 &&
           dataSong.map((item, index) => {
-            {
-              console.log("list", dataSong);
-            }
             return (
               <div
                 key={index}
