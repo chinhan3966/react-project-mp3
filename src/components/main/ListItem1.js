@@ -36,11 +36,9 @@ const ListItem1 = ({ title, data }) => {
                 <SwiperSlide key={index}>
                   {console.log("check data", data)}
                   <Album
-                    title={item.name}
-                    des={item.author}
-                    img={
-                      "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-                    }
+                    title={item.title || item.name}
+                    des={item.author || item.des}
+                    img={item.img}
                   />
                 </SwiperSlide>
               );
