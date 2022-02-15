@@ -2,7 +2,7 @@ import React from "react";
 import { BsPlayFill } from "react-icons/bs";
 const Album = ({ img, title, des }) => {
   return (
-    <div className="w-full shadow-md text-center p-4">
+    <div className="w-full shadow-md text-center p-4 cursor-pointer">
       <div className="relative">
         <img
           src={img}

@@ -15,7 +15,7 @@ const MainRight = () => {
   // };
 
   return (
-    <div className="shadow-sm grow p-8">
+    <div className="w-[30%] shadow-sm p-8">
       <Notification />
       <Artist />
       <PlaySong />

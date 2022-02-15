@@ -1,27 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Outlet } from "react-router";
 import ListContainer from "./ListContainer";
 
 const List = () => {
   return (
     <>
       <div>
-        <Link to="music" className="mr-4 font-semibold">
+        <NavLink
+          activeclassname="active"
+          to="music"
+          className="mr-4 font-semibold text-[#92a0c1]"
+        >
           Music
-        </Link>
-        <Link to="postcast" className="mr-4 font-semibold text-[#92a0c1]">
-          Postcast
-        </Link>
-        <Link to="live" className="mr-4 font-semibold text-[#92a0c1]">
+        </NavLink>
+        <NavLink to="youtube" className="mr-4 font-semibold text-[#92a0c1]">
+          Youtube
+        </NavLink>
+        <NavLink to="live" className="mr-4 font-semibold text-[#92a0c1]">
           Live
-        </Link>
-        <Link to="radio" className="mr-4 font-semibold text-[#92a0c1]">
+        </NavLink>
+        <NavLink to="radio" className="mr-4 font-semibold text-[#92a0c1]">
           Radio
-        </Link>
+        </NavLink>
       </div>
-      <div>
+      <Outlet />
+
+      {/* <div>
         <ListContainer />
-      </div>
+      </div> */}
     </>
   );
 };

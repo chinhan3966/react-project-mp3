@@ -106,3 +106,8 @@ html::-webkit-scrollbar-thumb {
 .rhap_main-controls svg {
   font-size: 30px !important;
 }
+
+a.active {
+  color: #465785;
+  transition: all 0.2s;
+}

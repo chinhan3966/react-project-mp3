@@ -35,8 +35,8 @@ function App() {
 
   return (
     <div className="App font-['Poppins']">
+      <Menu />
       <Song.Provider value={{ dataSong, song, handlePlaySong }}>
-        <Menu />
         <div className="ml-[15%] flex   ">
           <MainLeft />
           <MainRight />

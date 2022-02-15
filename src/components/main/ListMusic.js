@@ -24,7 +24,7 @@ const ListMusic = () => {
       </div>
       <div className="h-96 overflow-y-scroll" id="scroll-hidden">
         {/* listMusic */}
-        {console.log(dataSong)}
+        {/* {console.log(dataSong)} */}
         {dataSong &&
           dataSong.length > 0 &&
           dataSong.map((item, index) => {

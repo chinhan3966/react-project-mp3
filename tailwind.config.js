@@ -5,6 +5,9 @@ module.exports = {
       translate: {
         center: "-50%",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

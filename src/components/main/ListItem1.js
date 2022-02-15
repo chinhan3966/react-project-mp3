@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Album from "./Album";
+import Song from "../main/Context";
 
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -13,6 +14,7 @@ import "swiper/css/scrollbar";
 // import "./styles.css";
 
 const ListItem1 = ({ title, data }) => {
+  const { handlePlaySong, song, dataSong } = useContext(Song);
   return (
     <div className="w-full shadow-md mt-6 pb-6 ">
       <div className="flex justify-between p-6 ">
@@ -33,7 +35,10 @@ const ListItem1 = ({ title, data }) => {
             data.length > 0 &&
             data.map((item, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide
+                  key={index}
+                  onClick={() => handlePlaySong(item.id)}
+                >
                   {/* {console.log("check data", data)} */}
                   <Album
                     title={item.title || item.name}

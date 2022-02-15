@@ -5,11 +5,25 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Song from "../src/components/main/Context";
+import ListContainer from "./components/main/ListContainer";
+import Youtube from "./components/page/Youtube";
+import Live from "./components/page/Live";
+import NotFound from "./components/page/NotFound";
+import Radio from "./components/page/Radio";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<ListContainer />}></Route>
+          <Route path="music" element={<ListContainer />}></Route>
+          <Route path="youtube" element={<Youtube />}></Route>
+          <Route path="live" element={<Live />}></Route>
+          <Route path="radio" element={<Radio />}></Route>
+        </Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
