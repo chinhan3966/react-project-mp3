@@ -5,3 +5,10 @@
 .container {
   @apply flex items-center pl-[25%] hover:text-[#fa7c05] cursor-pointer transition-all;
 }
+
+.inputCustom {
+  @apply border outline-none px-3 py-1 rounded-sm min-w-[400px]  focus:ring-1 focus:ring-[#32df4f];
+}
+.error {
+  @apply text-red-300;
+}

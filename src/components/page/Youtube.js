@@ -3,10 +3,20 @@ import { useNavigate } from "react-router";
 import { AiOutlineSearch } from "react-icons/ai";
 import axios from "axios";
 import moment from "moment";
+import useGetData from "../../custom/fetch";
+import "./Youtube.css";
+
 const Youtube = () => {
   const navigation = useNavigate();
+  // const [show, setShow] = useState(true);
   const [query, setQuery] = useState("");
   const [dataVideo, setDataVideo] = useState([]);
+  // const [dataCopy, setDataCopy] = useState([]);
+  // const { data } = useGetData(
+  //   "https://www.googleapis.com/youtube/v3/search",
+  //   query
+  // );
+
   const handleSearch = async () => {
     let res = await axios({
       method: "GET",
@@ -18,7 +28,6 @@ const Youtube = () => {
         q: query,
       },
     });
-    console.log(res.data.items);
     if (res && res.data && res.data.items) {
       setDataVideo(res.data.items);
     }
@@ -45,7 +54,7 @@ const Youtube = () => {
       </div>
 
       {/**Result */}
-      <div className="mt-10">
+      <div className={`mt-10 `}>
         {dataVideo &&
           dataVideo.length > 0 &&
           dataVideo.map((item, index) => (
@@ -53,7 +62,7 @@ const Youtube = () => {
               {/**left */}
               <div className="left w-[45%] ">
                 <iframe
-                  className="p-1 aspect-video w-full"
+                  className="p-1 aspect-video w-full "
                   src={`https://www.youtube.com/embed/${item.id.videoId}`}
                   title="YouTube video player"
                   frameBorder="0"
@@ -65,7 +74,7 @@ const Youtube = () => {
               <div className="right w-[55%] p-2">
                 {/**title */}
                 <div>
-                  <h1 className="font-medium line-clamp-2 ">
+                  <h1 className="font-medium line-clamp-2 capitalize ">
                     {item.snippet.title}
                   </h1>
                 </div>
