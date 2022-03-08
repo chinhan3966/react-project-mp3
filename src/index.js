@@ -21,8 +21,8 @@ ReactDOM.render(
           <Route path="youtube" element={<Youtube />}></Route>
           <Route path="live" element={<Live />}></Route>
           <Route path="radio" element={<Radio />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Route>
-        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

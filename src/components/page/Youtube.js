@@ -29,6 +29,7 @@ const Youtube = () => {
       },
     });
     if (res && res.data && res.data.items) {
+      console.log(res);
       setDataVideo(res.data.items);
     }
   };

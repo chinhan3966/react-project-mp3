@@ -1,13 +1,13 @@
 import React from "react";
 import { BsPlayFill } from "react-icons/bs";
 import { MdAddBox } from "react-icons/md";
-import { dataSong } from "../../../src/dataSong";
+// import { dataSong } from "../../../src/dataSong";
 import "./customScroll.css";
 import Song from "./Context";
 import { useContext, useState } from "react";
 
 const ListMusic = () => {
-  const { song, handlePlaySong } = useContext(Song);
+  const { song, handlePlaySong, dataSong } = useContext(Song);
   const [active, setActive] = useState(false);
   const handleClick = (id) => {
     // console.log("check id:>>", id);
