@@ -19,7 +19,7 @@ function App() {
 
   const handlePlaySong = (id) => {
     const maxLength = dataSong.length;
-    console.log(maxLength);
+    // console.log(maxLength);
     if (id < 0) {
       setSong(dataSong[maxLength - 1]);
       return;

@@ -23,6 +23,7 @@ const ListItem1 = ({ title, data }) => {
       </div>
       <div className="flex justify-evenly ">
         <Swiper
+          style={{ paddingBottom: "20px" }}
           scrollbar={{
             hide: true,
           }}
