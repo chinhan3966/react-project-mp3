@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { AiOutlineSearch } from "react-icons/ai";
 import axios from "axios";
@@ -11,26 +11,54 @@ const Youtube = () => {
   // const [show, setShow] = useState(true);
   const [query, setQuery] = useState("");
   const [dataVideo, setDataVideo] = useState([]);
+  const [isCall, setIsCall] = useState(false);
+  // console.log("state", dataVideo);
   // const [dataCopy, setDataCopy] = useState([]);
   // const { data } = useGetData(
   //   "https://www.googleapis.com/youtube/v3/search",
   //   query
   // );
-
+  // useEffect(() => {
+  //   const filterDataVideo = dataVideo.filter((video, index) => {
+  //     return dataVideo.find((item) => item.etag === video.etag);
+  //   });
+  //   console.log("filter", filterDataVideo);
+  // }, [dataVideo]);
   const handleSearch = async () => {
     let res = await axios({
       method: "GET",
       url: "https://www.googleapis.com/youtube/v3/search",
       params: {
         part: "snippet",
-        maxResults: "20",
+        maxResults: "5",
         key: "AIzaSyAwZKOK8Pxi9K-NiawgeQ-cn3shAGR0XQI",
         q: query,
       },
     });
     if (res && res.data && res.data.items) {
-      console.log(res);
+      // console.log(res);
       setDataVideo(res.data.items);
+      setIsCall(true);
+    }
+  };
+
+  const handleAddVideo = async () => {
+    let res = await axios({
+      method: "GET",
+      url: "https://www.googleapis.com/youtube/v3/search",
+      params: {
+        part: "snippet",
+        maxResults: "10",
+        key: "AIzaSyAwZKOK8Pxi9K-NiawgeQ-cn3shAGR0XQI",
+        q: query,
+      },
+    });
+    if (res && res.data && res.data.items) {
+      // console.log("add data", res.data.items);
+      const data = res.data.items.slice(5, 9);
+      const newArr = [...dataVideo, ...data];
+      setDataVideo(newArr);
+      setIsCall(true);
     }
   };
   return (
@@ -107,6 +135,13 @@ const Youtube = () => {
             </div>
           ))}
       </div>
+      {isCall === true && (
+        <div className="mt-4 text-center">
+          <button className="px-8 py-2 bg-[#606060]" onClick={handleAddVideo}>
+            Xem them
+          </button>
+        </div>
+      )}
     </div>
   );
 };

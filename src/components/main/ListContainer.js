@@ -9,13 +9,22 @@ import img5 from "../../assets/img/chali.jpg";
 import img6 from "../../assets/img/justin.jpg";
 import img7 from "../../assets/img/gd.jpg";
 import img8 from "../../assets/img/rose.png";
-import { data3, data4, data5, data6 } from "../../../src/data";
+import { data5, data6 } from "../../../src/data";
 // import { data, data1 } from "../../dataSong";
 import ListMusic from "./ListMusic";
 import { useContext } from "react";
 import Song from "./Context";
 const ListContainer = () => {
   const { dataSong } = useContext(Song);
+
+  // useEffect(() => {
+  //   //do something
+
+  //   return () =>{
+  //     //handle unmount
+  //   }
+
+  // },[])
 
   return (
     <div>
