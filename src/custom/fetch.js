@@ -4,6 +4,8 @@ import axios from "axios";
 const useGetData = (url, query) => {
   const [data, setData] = useState([]);
   useEffect(() => {
+    const ourRequest = axios.CancelToken.source();
+
     try {
       async function fetchData() {
         let res = await axios({
@@ -15,6 +17,7 @@ const useGetData = (url, query) => {
             key: "AIzaSyAwZKOK8Pxi9K-NiawgeQ-cn3shAGR0XQI",
             q: query,
           },
+          cancelToken: ourRequest.token,
         });
 
         if (res && res.data && res.data.items) {
@@ -23,8 +26,13 @@ const useGetData = (url, query) => {
       }
       fetchData();
     } catch {
-      console.log("err");
+      console.log("err", err.message);
     }
+
+    //willUnMount
+    return () => {
+      ourRequest.cancel();
+    };
   }, []);
 
   return {
