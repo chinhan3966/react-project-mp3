@@ -64,6 +64,8 @@ const Youtube = () => {
   return (
     <div className="mt-3 font-poppins">
       {/**Search */}
+      {console.log("check dataa", dataVideo)}
+
       <div className="text-center flex items-center justify-center">
         <input
           value={query}

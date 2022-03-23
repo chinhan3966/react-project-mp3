@@ -26,14 +26,14 @@ const useGetData = (url, query) => {
       }
       fetchData();
     } catch {
-      console.log("err", err.message);
+      console.log("error fail fetch api response");
     }
 
     //willUnMount
     return () => {
       ourRequest.cancel();
     };
-  }, []);
+  }, [query, url]);
 
   return {
     data,
