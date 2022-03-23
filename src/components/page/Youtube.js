@@ -36,7 +36,7 @@ const Youtube = () => {
       },
     });
     if (res && res.data && res.data.items) {
-      // console.log(res);
+      console.log(res);
       setDataVideo(res.data.items);
       setIsCall(true);
     }
@@ -54,7 +54,6 @@ const Youtube = () => {
       },
     });
     if (res && res.data && res.data.items) {
-      // console.log("add data", res.data.items);
       const data = res.data.items.slice(5, 9);
       const newArr = [...dataVideo, ...data];
       setDataVideo(newArr);
@@ -64,7 +63,7 @@ const Youtube = () => {
   return (
     <div className="mt-3 font-poppins">
       {/**Search */}
-      {console.log("check dataa", dataVideo)}
+      {/* {console.log("check dataa", dataVideo)} */}
 
       <div className="text-center flex items-center justify-center">
         <input

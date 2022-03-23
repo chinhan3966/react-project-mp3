@@ -18,12 +18,12 @@ const List = () => {
           Youtube
         </NavLink>
 
-        <NavLink to="radio" className="mr-4 font-semibold text-[#92a0c1]">
+        {/* <NavLink to="radio" className="mr-4 font-semibold text-[#92a0c1]">
           Radio
         </NavLink>
         <NavLink to="live" className="mr-4 font-semibold text-[#92a0c1]">
           Live
-        </NavLink>
+        </NavLink> */}
       </div>
       <Outlet />
 
