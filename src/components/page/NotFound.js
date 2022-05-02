@@ -1,20 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { isFalseMenu } from "../../redux/actions";
-// import { useDispatch } from "react-redux";
+
 const NotFound = () => {
   const [count, setCount] = useState(3);
   const navigation = useNavigate();
-  // const dispatch = useDispatch();
+  
   const countRef = useRef(null);
 
-  // useEffect(() => {
-  //   dispatch(isFalseMenu());
-  // }, []);
+  
 
   useEffect(() => {
     countRef.current = setInterval(() => {
-      //   setCount((prev) => setCount(prev - 1));
+      
       if (count === 0) {
         navigation("/");
       }
@@ -34,7 +31,7 @@ const NotFound = () => {
             className="mx-auto"
           />
           <p className="my-5">
-            {/* Trang không tồn tại. Bạn sẽ được đưa về trang chủ sau {count}s */}
+            
             Trang không tồn tại. Bạn sẽ được đưa về trang chủ sau {count}s
           </p>
           <Link
