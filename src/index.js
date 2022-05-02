@@ -18,7 +18,6 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route index element={<ListContainer />}></Route>
           <Route path="music" element={<ListContainer />}></Route>
-          <Route path="react-project-mp3" element={<ListContainer />}></Route>
           <Route path="youtube" element={<Youtube />}></Route>
           <Route path="live" element={<Live />}></Route>
           <Route path="radio" element={<Radio />}></Route>

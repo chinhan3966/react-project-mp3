@@ -6,6 +6,13 @@ import Song from "./Context";
 import { useContext } from "react";
 import { BsFillVolumeDownFill } from "react-icons/bs";
 import { ImLoop } from "react-icons//im";
+import { AiFillPlaySquare } from "react-icons/ai";
+import { MdPauseCircle, MdLoop } from "react-icons/md";
+
+import { BsFillPlayFill, BsPause, BsPauseFill } from "react-icons/bs";
+import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
+import { GrCaretNext } from "react-icons/gr";
+
 const PlaySong = () => {
   const { song, handlePlaySong } = useContext(Song);
   const [volumeText, setVolumeText] = useState("100%");
@@ -34,13 +41,23 @@ const PlaySong = () => {
         </div>
         <AudioPlayer
           src={song.url}
+          // autoPlay={true}
           // customVolumeControls={[<BsFillVolumeDownFill />]}
           // customAdditionalControls={[<ImLoop />, <BsFillVolumeDownFill />]}
           // customVolumeControls={[<BsFillVolumeDownFill />, <div key={2}></div>]}
+          customIcons={{
+            play: <BsFillPlayFill />,
+            pause: <BsPauseFill />,
+            previous: <BiSkipPrevious />,
+            next: <BiSkipNext />,
+            loop: <MdLoop />,
+          }}
           showSkipControls={true}
           showJumpControls={false}
           onClickPrevious={handlePrev}
           onClickNext={handleNext}
+          customVolumeControls={[]}
+          customAdditionalControls={[]}
         />
       </div>
     </div>
