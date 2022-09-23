@@ -20,9 +20,9 @@ const MainRight = () => {
 
   return (
     <div className="lg:w-[30%] w-full shadow-sm md:p-8 p-4">
-      {pathname === "/music" && <Notification />}
-      {pathname === "/music" && <Artist />}
-      {pathname === "/music" && <PlaySong />}
+      {!pathname.includes("youtube") && <Notification />}
+      {!pathname.includes("youtube") && <Artist />}
+      {!pathname.includes("youtube") && <PlaySong />}
     </div>
   );
 };
