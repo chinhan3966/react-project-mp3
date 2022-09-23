@@ -10,7 +10,7 @@ import Library from "./Library";
 import Playlist from "./Playlist";
 const Menu = () => {
   return (
-    <div className="fixed top-0 left-0 w-[15%] h-screen shadow-md">
+    <div className="w-full">
       <div className="flex justify-center items-center text-[#303e65] mt-6">
         <AiFillPlayCircle size={"30px"} />
         <h1 className="ml-2 font-semibold">Rungon</h1>

@@ -5,6 +5,7 @@ import PlaySong from "./PlaySong";
 import Song from "./Context";
 import { dataSong } from "../../dataSong";
 import { useState } from "react";
+import { useLocation } from "react-router";
 
 const MainRight = () => {
   // const [song, setSong] = useState(dataSong[50]);
@@ -14,11 +15,14 @@ const MainRight = () => {
   //   setSong(newSong);
   // };
 
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
-    <div className="w-[30%] shadow-sm p-8">
-      <Notification />
-      <Artist />
-      <PlaySong />
+    <div className="lg:w-[30%] w-full shadow-sm md:p-8 p-4">
+      {pathname === "/music" && <Notification />}
+      {pathname === "/music" && <Artist />}
+      {pathname === "/music" && <PlaySong />}
     </div>
   );
 };

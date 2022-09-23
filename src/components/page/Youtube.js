@@ -88,9 +88,9 @@ const Youtube = () => {
         {dataVideo &&
           dataVideo.length > 0 &&
           dataVideo.map((item, index) => (
-            <div className="mt-5 flex " key={index}>
+            <div className="mt-5 md:flex md:flex-row flex-col " key={index}>
               {/**left */}
-              <div className="left w-[45%] ">
+              <div className="left md:w-[45%] w-full ">
                 <iframe
                   className="p-1 aspect-video w-full "
                   src={`https://www.youtube.com/embed/${item.id.videoId}`}
@@ -101,7 +101,7 @@ const Youtube = () => {
                 ></iframe>
               </div>
               {/**right */}
-              <div className="right w-[55%] p-2">
+              <div className="right md:w-[55%] w-full p-2">
                 {/**title */}
                 <div>
                   <h1 className="font-medium line-clamp-2 capitalize ">

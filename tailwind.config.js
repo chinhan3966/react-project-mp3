@@ -9,6 +9,10 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
     },
+    // screens: {
+    //   tablet: "991px",
+    //   // => @media (min-width: 640px) { ... }
+    // },
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };

@@ -29,8 +29,22 @@ const ListItem1 = ({ title, data }) => {
           }}
           modules={[Scrollbar]}
           className="mySwiper"
-          slidesPerView={4}
-          spaceBetween={25}
+          // slidesPerView={4}
+          // spaceBetween={25}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            500: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
         >
           {data &&
             data.length > 0 &&

@@ -3,7 +3,7 @@ import List from "./List";
 
 const MainLeft = () => {
   return (
-    <div className="w-[70%] p-8 ">
+    <div className="lg:w-[70%] w-full md:p-8 p-4">
       <List />
     </div>
   );
