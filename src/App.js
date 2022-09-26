@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App font-['Poppins']  ">
       <div
-        className={`fixed top-0 left-[-50%] z-10 bg-[#fff] w-[200px] h-[100vh] shadow-2xl transition-all  ${
+        className={`fixed top-0 left-[-70%] z-10 bg-[#fff] w-[200px] h-[100vh] shadow-2xl transition-all  ${
           isShowMenu ? "activeMenu transition-all" : ""
         }`}
       >

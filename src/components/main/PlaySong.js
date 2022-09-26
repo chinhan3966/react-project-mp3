@@ -23,6 +23,10 @@ const PlaySong = () => {
   const handleNext = () => {
     handlePlaySong(song.id + 1);
   };
+
+  const handleAutoPlay = () => {
+    handlePlaySong(song.id + 1);
+  };
   return (
     <div>
       <div className="w-full border bg-[#238e8e]  rounded-3xl px-4 py-8 text-center">
@@ -54,6 +58,8 @@ const PlaySong = () => {
           }}
           showSkipControls={true}
           showJumpControls={false}
+          autoPlay={true}
+          onEnded={handleAutoPlay}
           onClickPrevious={handlePrev}
           onClickNext={handleNext}
           customVolumeControls={[]}

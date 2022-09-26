@@ -11,9 +11,11 @@ import { dataSong } from "./dataSong";
 
 const dataCopy1 = [...dataSong];
 const dataCopy2 = [...dataSong];
+const dataCopy3 = [...dataSong];
 
 export const data5 = dataCopy1.splice(40, 30);
 export const data6 = dataCopy2.splice(1, 39);
+export const list8D = dataCopy3.slice(84, 95).reverse();
 
 // export const data3 = [
 //   {

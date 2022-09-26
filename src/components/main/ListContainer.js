@@ -9,14 +9,14 @@ import img5 from "../../assets/img/chali.jpg";
 import img6 from "../../assets/img/justin.jpg";
 import img7 from "../../assets/img/gd.jpg";
 import img8 from "../../assets/img/rose.png";
-import { data5, data6 } from "../../../src/data";
+import { data5, data6, list8D } from "../../../src/data";
 // import { data, data1 } from "../../dataSong";
 import ListMusic from "./ListMusic";
 import { useContext } from "react";
 import Song from "./Context";
 const ListContainer = () => {
   const { dataSong } = useContext(Song);
-
+  console.log("check data 8D :>>", list8D);
   // useEffect(() => {
   //   //do something
 
@@ -29,6 +29,7 @@ const ListContainer = () => {
   return (
     <div>
       {/* {console.log(data5, data6)}  */}
+      <ListItem1 title="Music 8D Use Headphone 🎧" data={list8D} />
       <ListItem1 title="Global Top 50" data={data5} />
       <ListItem1 title="Song You Might Like" data={data6} />
       <ListMusic />
